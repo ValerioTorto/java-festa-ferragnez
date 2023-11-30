@@ -6,29 +6,36 @@ public class CheckGuest {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        //CHIEDO IL NOME ALL'INVITATO
 
+        //CREO ARRAY DEGLI INVITATI
         String[] guests = {"Dua Lipa", "Paris Hilton", "Manuel Agnelli", "J-Ax", "Francesco Totti", "Ilary Blasi", "Bebe Vio", "Luis", "Pardis Zarei", "Martina Maccherone", "Rachel Zeilic"};
-        //boolean equals = false;
+
+        //CHIEDO IL NOME ALL'INVITATO
+        System.out.println("Dimmi il tuo nome: ");
+        String name = scanner.nextLine();
+        boolean equals = false;
         for (int i = 0; i < guests.length; i++) {
-            System.out.println("Dimmi il tuo nome: ");
-            String name = scanner.nextLine();
-            //CREO ARRAY DEGLI INVITATI
 
 
-            if (name.equals(guests(i))) {
-                //equals = true;
+
+
+            if (name.equals(guests[i])) {
+
                 System.out.println("Prego puoi entrare");
+                equals = true;
+                break;
             } else {
                 System.out.println("Ora chiamo la polizia");
+
 
 
             }
             scanner.close();
         }
-
     }
 
 
 }
+
+
 
